@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxeNest — Atelier of Haute Interior Architecture & Design</title>
+  <meta name="description" content="LuxeNest is an acclaimed interior design brand specializing in Modern, Minimalist, Luxury, Indian Traditional, Contemporary, and Bohemian homes. Explore our Jaipur Heritage Home case study, interactive cost estimator, and style explorer.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121413'/><path d='M30 75 L30 25 L45 25 L45 65 L70 65 L70 75 Z' fill='%23C5A880'/><path d='M52 25 L68 50 L68 25 L78 25 L78 58 L62 33 L62 58 L52 58 Z' fill='%23C5A880'/></svg>">
+</head>
+<body>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="LuxeNest Home">
+        <div class="logo-monogram">LN</div>
+        <div>
+          <span class="logo-text">LuxeNest</span>
+          <span class="logo-tagline">Haute Interiors & Architecture</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#styles" class="nav-link">Design Styles</a></li>
+          <li><a href="#case-study" class="nav-link">Jaipur Case Study</a></li>
+          <li><a href="#estimator" class="nav-link">Cost Estimator</a></li>
+          <li><a href="#style-quiz" class="nav-link">Style Finder</a></li>
+          <li><a href="#process" class="nav-link">Turnkey Process</a></li>
+          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-gold btn-sm open-consultation-btn">Book Consultation</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <a href="#styles" class="nav-link drawer-link">Design Styles</a>
+      <a href="#case-study" class="nav-link drawer-link">Jaipur Case Study</a>
+      <a href="#estimator" class="nav-link drawer-link">Cost Estimator</a>
+      <a href="#style-quiz" class="nav-link drawer-link">Style Finder</a>
+      <a href="#process" class="nav-link drawer-link">Turnkey Process</a>
+      <a href="#testimonials" class="nav-link drawer-link">Reviews</a>
+      <div style="margin-top: 20px;">
+        <button class="btn btn-gold open-consultation-btn" style="width: 100%;">Book Consultation</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>✨</span>
+          <span>Curated Architectural Living & Turnkey Execution</span>
+        </div>
+        <h1 class="hero-title">
+          Where Timeless Indian Heritage Meets <em>Avant-Garde Modern Living</em>
+        </h1>
+        <p class="hero-subtitle">
+          LuxeNest conceptualizes and executes bespoke residential sanctuaries across India. From wabi-sabi minimalism to royal Rajasthani restorations, we shape spaces that inspire serenity, grandeur, and soulful comfort.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#styles" class="btn btn-gold">Explore 6 Design Styles</a>
+          <a href="#estimator" class="btn btn-outline">Calculate Interior Cost</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>250<span>+</span></h4>
+            <p>Homes Handed Over</p>
+          </div>
+          <div class="stat-item">
+            <h4>10<span>Yrs</span></h4>
+            <p>Warranty on Millwork</p>
+          </div>
+          <div class="stat-item">
+            <h4>4.9<span>★</span></h4>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual-frame">
+        <img 
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" 
+          alt="LuxeNest Luxury Living Room with double-height ceiling and bespoke brass accents" 
+          class="hero-image-main"
+          loading="eager"
+        >
+        <div class="hero-floating-card">
+          <p class="card-tag">Featured Masterpiece</p>
+          <h5>The Altamount Penthouse</h5>
+          <p class="card-meta">4,200 sq ft Contemporary Sanctuary • Mumbai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 6 Design Disciplines Showcase -->
+  <section class="styles-section" id="styles">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <span class="section-label">Design Disciplines</span>
+          <h2 class="section-title">Six Distinct Design Philosophies</h2>
+          <p class="section-desc">
+            Whether you gravitate toward the clean precision of modern minimalism or the tactile soul of Indian craftsmanship, our master architects tailor every detail to your lifestyle.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="style-filters" role="tablist">
+          <button class="filter-btn active" data-filter="all">All Disciplines</button>
+          <button class="filter-btn" data-filter="modern">Modern</button>
+          <button class="filter-btn" data-filter="minimalist">Minimalist</button>
+          <button class="filter-btn" data-filter="luxury">Luxury</button>
+          <button class="filter-btn" data-filter="indian">Indian Traditional</button>
+          <button class="filter-btn" data-filter="contemporary">Contemporary</button>
+          <button class="filter-btn" data-filter="bohemian">Bohemian</button>
+        </div>
+      </div>
+
+      <!-- Styles Grid -->
+      <div class="styles-grid" id="stylesGrid">
+
+        <!-- 1. Modern Interior -->
+        <article class="style-card" data-category="modern">
+          <div class="style-img-wrap">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Modern Interior Design by LuxeNest with clean lines and architectural cove lighting">
+            <span class="style-badge">Modern</span>
+          </div>
+          <div class="style-body">
+            <h3>Modern Interior</h3>
+            <p>
+              Geometric purity, concealed flush doors, flush floor transitions, and razor-sharp architectural cove lighting. Form relentlessly serves light, space, and functionality.
+            </p>
+            <div class="style-tags">
+              <span class="style-tag">Concealed Lighting</span>
+              <span class="style-tag">Flush Joinery</span>
+              <span class="style-tag">Open Spatial Flow</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Minimalist Interior -->
+        <article class="style-card" data-category="minimalist">
+          <div class="style-img-wrap">
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80" alt="Minimalist Interior with wabi-sabi calm, micro-cement and negative space">
+            <span class="style-badge">Minimalist</span>
+          </div>
+          <div class="style-body">
+            <h3>Minimalist Interior</h3>
+            <p>
+              Wabi-sabi calm through deliberate negative space, seamless micro-cement finishes, hidden storage cavities, and sculpted organic curves that calm sensory overload.
+            </p>
+            <div class="style-tags">
+              <span class="style-tag">Wabi-Sabi</span>
+              <span class="style-tag">Micro-Cement</span>
+              <span class="style-tag">Hidden Storage</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Luxury Interior -->
+        <article class="style-card" data-category="luxury">
+          <div class="style-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Luxury Interior with Italian Statuario marble, brushed brass and fluted oak">
+            <span class="style-badge">Luxury</span>
+          </div>
+          <div class="style-body">
+            <h3>Luxury Interior</h3>
+            <p>
+              Opulent material depth featuring book-matched Italian Statuario marble slabs, fluted smoked oak paneling, custom brushed champagne brass joinery, and suede acoustic accents.
+            </p>
+            <div class="style-tags">
+              <span class="style-tag">Italian Statuario</span>
+              <span class="style-tag">Brushed Brass</span>
+              <span class="style-tag">Fluted Oak</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Indian Traditional -->
+        <article class="style-card" data-category="indian">
+          <div class="style-img-wrap">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Indian Traditional Interior with carved teakwood, brass urlis and heritage courtyard warmth">
+            <span class="style-badge">Indian Traditional</span>
+          </div>
+          <div class="style-body">
+            <h3>Indian Traditional</h3>
+            <p>
+              An ode to artisanal legacy: hand-carved teakwood jharokha niches, hand-beaten brass urlis, Pichwai miniature art alcoves, Kota stone inlays, and rich block-printed raw silks.
+            </p>
+            <div class="style-tags">
+              <span class="style-tag">Teak Jharokhas</span>
+              <span class="style-tag">Pichwai Niches</span>
+              <span class="style-tag">Brass Urlis</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Contemporary -->
+        <article class="style-card" data-category="contemporary">
+          <div class="style-img-wrap">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Contemporary Interior with curved bouclé seating and curated art gallery lighting">
+            <span class="style-badge">Contemporary</span>
+          </div>
+          <div class="style-body">
+            <h3>Contemporary</h3>
+            <p>
+              Dynamic present-day sophistication: sculptural curved bouclé sofas, bold contrasting metallics, statement pendant luminaires, and gallery-grade art curation.
+            </p>
+            <div class="style-tags">
+              <span class="style-tag">Curved Bouclé</span>
+              <span class="style-tag">Mixed Metals</span>
+              <span class="style-tag">Art Curation</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Bohemian -->
+        <article class="style-card" data-category="bohemian">
+          <div class="style-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Bohemian Interior with rattan cane webbing, layered kilims and lush indoor greenery">
+            <span class="style-badge">Bohemian</span>
+          </div>
+          <div class="style-body">
+            <h3>Bohemian</h3>
+            <p>
+              Free-spirited warmth driven by natural cane webbing, vintage Moroccan & Persian kilims, terracotta vessels, macramé textures, and an abundance of biophilic greenery.
+            </p>
+            <div class="style-tags">
+              <span class="style-tag">Rattan & Cane</span>
+              <span class="style-tag">Vintage Kilims</span>
+              <span class="style-tag">Biophilic Foliage</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Case Study: Jaipur Heritage Home -->
+  <section class="case-study-section" id="case-study">
+    <div class="container">
+      <span class="section-label">Featured Case Study</span>
+      <h2 class="section-title">The Jaipur Heritage Home</h2>
+      <p class="section-desc">
+        A masterclass in sensitive historical conservation and contemporary livability: restoring a 35-year-old sandstone Haveli into a luminous, modern Rajasthani residence.
+      </p>
+
+      <!-- Key Project Metadata Strip -->
+      <div class="project-meta-strip">
+        <div class="meta-item">
+          <span class="meta-label">Project</span>
+          <span class="meta-value">Jaipur Heritage Home</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Area</span>
+          <span class="meta-value">2,000 sq ft</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Style</span>
+          <span class="meta-value">Modern Rajasthani</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Budget</span>
+          <span class="meta-value">₹8 – 12 Lakhs</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Duration</span>
+          <span class="meta-value">4 Months</span>
+        </div>
+      </div>
+
+      <!-- Before & After Comparison Showcase -->
+      <div class="slider-showcase-wrap">
+        <div>
+          <div class="comparison-container" id="comparisonSlider">
+            <!-- After (Transformed) Image -->
+            <div class="comparison-image image-after">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="After Renovation: Modern Rajasthani Living Room with restored arches and luminous Kota stone">
+              <span class="comparison-label label-after">After Renovation</span>
+            </div>
+            <!-- Before (Original) Image -->
+            <div class="comparison-image image-before" id="beforeImage">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85" alt="Before Renovation: Original ancestral living hall before restoration" style="filter: sepia(0.4) contrast(0.9) brightness(0.85);">
+              <span class="comparison-label label-before">Before Renovation</span>
+            </div>
+            <!-- Draggable Divider Handle -->
+            <div class="slider-handle" id="sliderHandle">
+              <div class="handle-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                  <polyline points="9 18 3 12 9 6" style="transform: rotate(180deg); transform-origin: center;"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-inverse-muted); margin-top: 12px; text-align: center;">
+            ↔ Drag the center slider left or right to inspect the spatial transformation
+          </p>
+        </div>
+
+        <div class="case-study-details">
+          <h3>Ancestral Soul, Contemporary Comfort</h3>
+          <p>
+            The clients inherited a historic property in C-Scheme, Jaipur with breathtaking sandstone arches that had been muffled by claustrophobic partitions and decayed wiring.
+          </p>
+
+          <div class="challenge-solution-grid">
+            <div class="cs-pill-card">
+              <h5>The Architectural Challenge</h5>
+              <p>Meticulously reinforcing structural cusped arches without adding weight, while routing modern smart-home automation and HVAC concealed within thick lime walls.</p>
+            </div>
+            <div class="cs-pill-card">
+              <h5>The Modern Rajasthani Solution</h5>
+              <p>Applied traditional Araish mirror lime plaster to reflect courtyard daylight, refinished green Kota stone floors with brass dividing strips, and designed modular teakwood millwork.</p>
+            </div>
+          </div>
+
+          <blockquote style="font-family: var(--font-editorial); font-size: 1.15rem; font-style: italic; color: var(--accent-gold-light); line-height: 1.6; border-left: 2px solid var(--accent-gold); padding-left: 16px;">
+            "LuxeNest transformed our family home into a royal retreat while finishing in exactly 4 months and strictly within our ₹11.2 Lakhs budget."
+            <footer style="font-family: var(--font-sans); font-size: 0.8rem; font-style: normal; color: var(--text-inverse-muted); margin-top: 6px;">
+              — Vikramaditya & Gayatri Rathore, Homeowners
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Materials Board & Budget Breakdown -->
+      <div class="case-study-footer-grid">
+        <div class="materials-board">
+          <h4>Tactile Material Palette</h4>
+          <div class="materials-chips">
+            <div class="material-chip">
+              <span class="mat-dot" style="background-color: #4A6356;"></span>
+              <span>Polished Kota Stone</span>
+            </div>
+            <div class="material-chip">
+              <span class="mat-dot" style="background-color: #2E5B88;"></span>
+              <span>Jaipur Blue Pottery</span>
+            </div>
+            <div class="material-chip">
+              <span class="mat-dot" style="background-color: #F0EAE1;"></span>
+              <span>Araish Lime Plaster</span>
+            </div>
+            <div class="material-chip">
+              <span class="mat-dot" style="background-color: #613B26;"></span>
+              <span>Reclaimed CP Teakwood</span>
+            </div>
+            <div class="material-chip">
+              <span class="mat-dot" style="background-color: #C5A880;"></span>
+              <span>Hand-Beaten Brass</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="budget-breakdown">
+          <h4>Budget Allocation (₹8 – 12 Lakhs)</h4>
+          <div class="budget-bar-group">
+            <div class="budget-bar-item">
+              <div class="budget-bar-header">
+                <span>Civil, Stone Polishing & Structural Repair</span>
+                <span>22% (~₹2.4L)</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 22%;"></div></div>
+            </div>
+            <div class="budget-bar-item">
+              <div class="budget-bar-header">
+                <span>Custom Teak Woodwork & Modular Storage</span>
+                <span>38% (~₹4.2L)</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 38%;"></div></div>
+            </div>
+            <div class="budget-bar-item">
+              <div class="budget-bar-header">
+                <span>Sandstone Jali Partitions, Brass & Lighting</span>
+                <span>18% (~₹2.0L)</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 18%;"></div></div>
+            </div>
+            <div class="budget-bar-item">
+              <div class="budget-bar-header">
+                <span>Furnishings, Drapes & Blue Pottery Decor</span>
+                <span>22% (~₹2.4L)</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 22%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Interior Cost Estimator -->
+  <section class="calculator-section" id="estimator">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="section-label">Transparent Pricing</span>
+        <h2 class="section-title">Interactive Interior Cost Estimator</h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Estimate your renovation or turnkey interior investment in real-time. Transparent pricing backed by fixed timelines and zero cost overrun guarantee.
+        </p>
+      </div>
+
+      <div class="calc-wrapper">
+        <!-- Controls -->
+        <div class="calc-controls">
+          <!-- Step 1: Configuration -->
+          <div class="calc-group">
+            <h4>1. Select Home Configuration</h4>
+            <div class="toggle-chips" id="configChips">
+              <button class="chip-btn" data-type="1bhk" data-base="6.5">1 BHK</button>
+              <button class="chip-btn active" data-type="2bhk" data-base="9.5">2 BHK</button>
+              <button class="chip-btn" data-type="3bhk" data-base="14.0">3 BHK</button>
+              <button class="chip-btn" data-type="4bhk" data-base="19.5">4 BHK / Villa</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Carpet Area -->
+          <div class="calc-group">
+            <div class="slider-val-header">
+              <h4>2. Carpet Area (Square Feet)</h4>
+              <span class="highlight" id="areaValueDisplay">1,200 sq ft</span>
+            </div>
+            <input type="range" min="600" max="4500" step="50" value="1200" class="range-slider" id="areaSlider">
+            <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-light); margin-top: 6px;">
+              <span>600 sq ft</span>
+              <span>2,500 sq ft</span>
+              <span>4,500+ sq ft</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Interior Style -->
+          <div class="calc-group">
+            <h4>3. Preferred Design Style</h4>
+            <div class="toggle-chips" id="styleChips">
+              <button class="chip-btn active" data-multiplier="1.0">Modern</button>
+              <button class="chip-btn" data-multiplier="0.95">Minimalist</button>
+              <button class="chip-btn" data-multiplier="1.35">Luxury</button>
+              <button class="chip-btn" data-multiplier="1.15">Modern Rajasthani</button>
+              <button class="chip-btn" data-multiplier="1.10">Contemporary</button>
+              <button class="chip-btn" data-multiplier="1.05">Bohemian</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Finish Tier -->
+          <div class="calc-group">
+            <h4>4. Material & Finishes Tier</h4>
+            <div class="toggle-chips" id="tierChips">
+              <button class="chip-btn" data-tiermult="0.9">Essential Elegance</button>
+              <button class="chip-btn active" data-tiermult="1.0">Signature Premium</button>
+              <button class="chip-btn" data-tiermult="1.3">Haute Bespoke</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Calculation Card -->
+        <div class="calc-summary-panel">
+          <div>
+            <div class="summary-header">
+              <p>Projected Investment</p>
+              <div class="estimated-price-display" id="estimatedPrice">
+                <span class="currency">₹</span>9.8 – 11.5 <span style="font-size: 1.2rem; font-family: var(--font-sans); font-weight: 500;">Lakhs</span>
+              </div>
+              <div class="estimated-duration-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span id="estimatedDuration">Timeline: 75 – 90 Working Days</span>
+              </div>
+            </div>
+
+            <ul class="estimate-breakdown-list">
+              <li><span>Bespoke Millwork & Wardrobes</span><span id="breakdownCarpentry">40% (~₹4.2L)</span></li>
+              <li><span>Civil, Stone & Floor Finishes</span><span id="breakdownCivil">25% (~₹2.6L)</span></li>
+              <li><span>Electrical & Architectural Lights</span><span id="breakdownElectrical">15% (~₹1.6L)</span></li>
+              <li><span>Soft Furnishings & Curated Styling</span><span id="breakdownFurnishing">20% (~₹2.1L)</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <button class="btn btn-gold open-consultation-btn" style="width: 100%;">Lock In This Estimate</button>
+            <p style="font-size: 0.72rem; color: var(--text-inverse-muted); text-align: center; margin-top: 10px;">
+              *Guaranteed within 5% of final approved 3D BOQ with 10-year warranty.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Style Matcher Quiz -->
+  <section class="quiz-section" id="style-quiz">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="section-label">Design Discovery</span>
+        <h2 class="section-title">Discover Your Soul Aesthetic</h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Unsure which style matches your life rhythms? Answer 3 curated questions and our AI design engine will curate your personalized spatial recommendation.
+        </p>
+      </div>
+
+      <div class="quiz-box">
+        <!-- Progress Pills -->
+        <div class="quiz-progress-bar">
+          <div class="quiz-step-pill active" id="quizStep1"></div>
+          <div class="quiz-step-pill" id="quizStep2"></div>
+          <div class="quiz-step-pill" id="quizStep3"></div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="quiz-question-card active" id="questionCard1">
+          <span style="font-size: 0.75rem; color: var(--accent-gold-dark); font-weight: 700; text-transform: uppercase;">Question 1 of 3</span>
+          <h3>What feeling should your living space evoke the moment you cross the threshold?</h3>
+          <div class="quiz-options-grid">
+            <div class="quiz-option" data-points="minimalist">
+              <h5>Wabi-Sabi Serenity</h5>
+              <p>Absolute calm, uncluttered breathing room, earthy textures, and silence.</p>
+            </div>
+            <div class="quiz-option" data-points="luxury">
+              <h5>Opulent Architectural Grandeur</h5>
+              <p>High-end hotel ambiance, Italian marble reflections, and ambient brass brilliance.</p>
+            </div>
+            <div class="quiz-option" data-points="indian">
+              <h5>Regal Heritage Warmth</h5>
+              <p>Intricate woodwork, traditional courtyard breeze, and artisanal nostalgia.</p>
+            </div>
+            <div class="quiz-option" data-points="contemporary">
+              <h5>Art-Collector Chic</h5>
+              <p>Curved furniture, dynamic forms, statement lighting, and gallery vibrancy.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 (Hidden Initially) -->
+        <div class="quiz-question-card" id="questionCard2" style="display: none;">
+          <span style="font-size: 0.75rem; color: var(--accent-gold-dark); font-weight: 700; text-transform: uppercase;">Question 2 of 3</span>
+          <h3>Which tactile texture draws your fingers first?</h3>
+          <div class="quiz-options-grid">
+            <div class="quiz-option" data-points="luxury">
+              <h5>Cool Italian Statuario Marble</h5>
+              <p>Mirror-polished natural veining paired with brushed champagne brass accents.</p>
+            </div>
+            <div class="quiz-option" data-points="indian">
+              <h5>Carved Sandstone & Blue Pottery</h5>
+              <p>Hand-chiseled jali stone paired with glazed ceramic tile and reclaimed teak.</p>
+            </div>
+            <div class="quiz-option" data-points="bohemian">
+              <h5>Woven Natural Cane & Bouclé</h5>
+              <p>Layered tactile jute, raw cotton slub, rattan mesh, and potted monstera leaves.</p>
+            </div>
+            <div class="quiz-option" data-points="modern">
+              <h5>Fluted Oak & Matte Lacquer</h5>
+              <p>Precision CNC grooved timber panels and smudge-proof matte graphite surfaces.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 (Hidden Initially) -->
+        <div class="quiz-question-card" id="questionCard3" style="display: none;">
+          <span style="font-size: 0.75rem; color: var(--accent-gold-dark); font-weight: 700; text-transform: uppercase;">Question 3 of 3</span>
+          <h3>How do you envision lighting your evenings?</h3>
+          <div class="quiz-options-grid">
+            <div class="quiz-option" data-points="modern">
+              <h5>Concealed Magnetic Track Channels</h5>
+              <p>Minimal linear architectural illumination hidden inside the ceiling profile.</p>
+            </div>
+            <div class="quiz-option" data-points="luxury">
+              <h5>Sculptural Crystal & Brushed Brass Pendant</h5>
+              <p>A dramatic central chandelier casting multifaceted warm reflections.</p>
+            </div>
+            <div class="quiz-option" data-points="indian">
+              <h5>Warm Urli & Diya Wall Sconces</h5>
+              <p>Soft indirect golden glow playing against carved jharokha shadows.</p>
+            </div>
+            <div class="quiz-option" data-points="bohemian">
+              <h5>Amber Rattan Lanterns & Candlelight</h5>
+              <p>Low cozy pools of warm light illuminating layered textiles and plants.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Result Card (Hidden Initially) -->
+        <div class="quiz-result-card" id="quizResult">
+          <div class="quiz-result-badge">Your Signature Aesthetic Match</div>
+          <h3 id="resultStyleTitle">Modern Rajasthani</h3>
+          <p id="resultStyleDesc">
+            You celebrate the romance of historic Indian craftsmanship married to modern spatial lightness. Your home thrives on carved stone, warm lime plasters, polished Kota stone, and effortless contemporary functionality.
+          </p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-gold open-consultation-btn">Book Free Design Consultation</button>
+            <button class="btn btn-outline" id="retakeQuizBtn">Retake Quiz</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Step Turnkey Process -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="section-label">Execution Blueprint</span>
+        <h2 class="section-title">The Turnkey LuxeNest Journey</h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          From first sketch to white-glove handover, our standardized 4-phase methodology guarantees design fidelity, cost certainty, and zero execution headaches.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-step-card">
+          <div class="step-num">01</div>
+          <h4>Spatial Discovery</h4>
+          <p>In-depth lifestyle audit, spatial zoning, moodboarding, and architectural site scans to define your design identity.</p>
+          <span class="step-timeline">Week 1 – 2</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step-card">
+          <div class="step-num">02</div>
+          <h4>3D CGI & VR Walkthrough</h4>
+          <p>Photorealistic 3D renders of every room down to fabric weaves, millwork drawings, and immersive VR spatial inspection.</p>
+          <span class="step-timeline">Week 3 – 4</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step-card">
+          <div class="step-num">03</div>
+          <h4>Precision Manufacturing</h4>
+          <p>German-grade factory manufacturing of modular joinery, stone procurement, electrical re-routing, and on-site build.</p>
+          <span class="step-timeline">Week 5 – 14</span>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step-card">
+          <div class="step-num">04</div>
+          <h4>White-Glove Handover</h4>
+          <p>Deep electrostatic sanitization, art and decor styling, quality snag-check, and issuance of our 10-Year Warranty card.</p>
+          <span class="step-timeline">Week 15 – 16</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials & Press -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <!-- Press Mentions -->
+      <div class="press-bar">
+        <span class="press-logo">Architectural Digest</span>
+        <span class="press-logo">Elle Decor</span>
+        <span class="press-logo">Vogue Living</span>
+        <span class="press-logo">Livingetc</span>
+        <span class="press-logo">India Design ID</span>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="section-label">Client Stories</span>
+        <h2 class="section-title">Endorsed by Discerning Homeowners</h2>
+        <p class="section-desc" style="margin: 0 auto;">
+          Hear how our studio translated diverse architectural dreams into timeless everyday realities.
+        </p>
+      </div>
+
+      <div class="testimonial-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="stars-rating">★★★★★</div>
+          <p class="testimonial-quote">
+            "LuxeNest designed our 3 BHK in Gurugram with a minimalist wabi-sabi philosophy. The micro-cement walls and concealed joinery create a serene sanctuary that our guests continuously marvel at."
+          </p>
+          <div class="client-profile">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Aranya Sen" class="client-avatar">
+            <div class="client-info">
+              <h5>Aranya & Siddharth Sen</h5>
+              <p>The Magnolias, Gurugram • Minimalist 3 BHK</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="stars-rating">★★★★★</div>
+          <p class="testimonial-quote">
+            "Our ancestral heritage villa in Jaipur had intricate jali work that needed delicate handling. LuxeNest executed the restoration within 4 months and our ₹11.2L budget without a single rupee of cost overrun."
+          </p>
+          <div class="client-profile">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Vikramaditya Rathore" class="client-avatar">
+            <div class="client-info">
+              <h5>Vikramaditya Rathore</h5>
+              <p>C-Scheme, Jaipur • Modern Rajasthani Villa</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="stars-rating">★★★★★</div>
+          <p class="testimonial-quote">
+            "The Italian Statuario marble bookmatching in our South Mumbai penthouse living room is sheer poetry. LuxeNest’s attention to acoustic panelling and brushed brass accents is world-class."
+          </p>
+          <div class="client-profile">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Meera Singhania" class="client-avatar">
+            <div class="client-info">
+              <h5>Meera Singhania</h5>
+              <p>Worli Sea Face, Mumbai • Haute Luxury Penthouse</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Booking Modal -->
+  <div class="modal-backdrop" id="consultationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      <span class="section-label">Reserve Your Session</span>
+      <h3 id="modalTitle" style="font-size: 1.6rem; margin-bottom: 8px;">Book a Private Design Consultation</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">
+        Meet our principal architect online or at our ateliers in Jaipur, Mumbai, Delhi, or Bengaluru.
+      </p>
+
+      <form id="consultationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="clientName">Full Name *</label>
+            <input type="text" id="clientName" class="form-control" placeholder="e.g. Ananya Roy" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="clientPhone">Phone / WhatsApp *</label>
+            <input type="tel" id="clientPhone" class="form-control" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="clientCity">Project City *</label>
+            <select id="clientCity" class="form-control" required>
+              <option value="">Select City</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi NCR">Delhi NCR</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Pune">Pune</option>
+              <option value="Other">Other India / International</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="clientStyle">Preferred Style *</label>
+            <select id="clientStyle" class="form-control" required>
+              <option value="Modern">Modern Interior</option>
+              <option value="Minimalist">Minimalist Interior</option>
+              <option value="Luxury">Luxury Haute Interior</option>
+              <option value="Indian Traditional">Indian Traditional / Modern Rajasthani</option>
+              <option value="Contemporary">Contemporary</option>
+              <option value="Bohemian">Bohemian</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="clientBHK">Property Size</label>
+            <select id="clientBHK" class="form-control">
+              <option value="2 BHK (900-1400 sq ft)">2 BHK (900 - 1,400 sq ft)</option>
+              <option value="3 BHK (1400-2200 sq ft)">3 BHK (1,400 - 2,200 sq ft)</option>
+              <option value="4 BHK (2200-3500 sq ft)">4 BHK (2,200 - 3,500 sq ft)</option>
+              <option value="Heritage Villa / Penthouse">Heritage Villa / Penthouse (3,500+ sq ft)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="clientBudget">Estimated Budget Range</label>
+            <select id="clientBudget" class="form-control">
+              <option value="₹8 - 12 Lakhs">₹8 – 12 Lakhs</option>
+              <option value="₹12 - 20 Lakhs">₹12 – 20 Lakhs</option>
+              <option value="₹20 - 40 Lakhs">₹20 – 40 Lakhs</option>
+              <option value="₹40+ Lakhs">₹40+ Lakhs (Haute Turnkey)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clientNotes">Design Vision or Specific Requirements</label>
+          <textarea id="clientNotes" class="form-control" rows="3" placeholder="Tell us about your home, timeline, or specific materials you adore..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 14px;">Confirm Consultation Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg" role="alert">
+    🎉 Consultation requested! Our senior design architect will connect within 4 business hours.
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo" style="margin-bottom: 12px; display: inline-flex;">
+            <div class="logo-monogram">LN</div>
+            <div>
+              <span class="logo-text" style="color: #FFFFFF;">LuxeNest</span>
+              <span class="logo-tagline" style="color: var(--accent-gold-light);">Haute Interiors</span>
+            </div>
+          </a>
+          <p>
+            An award-winning interior architecture brand bridging the soul of royal Indian craftsmanship with contemporary global luxury.
+          </p>
+          <div class="footer-studios">
+            <span>📍 <strong>Jaipur:</strong> C-Scheme, Sardar Patel Marg</span>
+            <span>📍 <strong>Mumbai:</strong> Bandra West, Pali Hill</span>
+            <span>📍 <strong>Delhi NCR:</strong> Greater Kailash II</span>
+            <span>📍 <strong>Bengaluru:</strong> 100ft Road, Indiranagar</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Design Disciplines</h5>
+          <ul class="footer-links">
+            <li><a href="#styles">Modern Interiors</a></li>
+            <li><a href="#styles">Minimalist & Wabi-Sabi</a></li>
+            <li><a href="#styles">Haute Luxury & Marble</a></li>
+            <li><a href="#styles">Indian Traditional</a></li>
+            <li><a href="#styles">Contemporary Styling</a></li>
+            <li><a href="#styles">Bohemian Chic</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Explore Atelier</h5>
+          <ul class="footer-links">
+            <li><a href="#case-study">Jaipur Heritage Case Study</a></li>
+            <li><a href="#estimator">Interior Cost Estimator</a></li>
+            <li><a href="#style-quiz">Style Finder Quiz</a></li>
+            <li><a href="#process">10-Year Warranty Policy</a></li>
+            <li><a href="#testimonials">Press & Editorial</a></li>
+            <li><a href="#process">45-Day Handover Guarantee</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Direct Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+            <li><a href="mailto:concierge@luxenest.com">✉️ concierge@luxenest.com</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">💬 WhatsApp Design Desk</a></li>
+            <li><span style="color: var(--text-inverse-muted); font-size: 0.8rem; display: inline-block; margin-top: 10px;">Hours: Mon – Sat (10:00 AM – 8:00 PM IST)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LuxeNest Interior Architecture Pvt. Ltd. All rights reserved.</p>
+        <p style="color: var(--accent-gold-light);">ISO 9001:2015 Certified Interior Studio • Green Building Council Member</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
