@@ -6,7 +6,7 @@
   <title>LuxeNest — Atelier of Haute Interior Architecture & Design</title>
   <meta name="description" content="LuxeNest is an acclaimed interior design brand specializing in Modern, Minimalist, Luxury, Indian Traditional, Contemporary, and Bohemian homes. Explore our Jaipur Heritage Home case study, interactive cost estimator, and style explorer.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121413'/><path d='M30 75 L30 25 L45 25 L45 65 L70 65 L70 75 Z' fill='%23C5A880'/><path d='M52 25 L68 50 L68 25 L78 25 L78 58 L62 33 L62 58 L52 58 Z' fill='%23C5A880'/></svg>">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
 </head>
 <body>
 
@@ -14,10 +14,10 @@
   <header class="site-header" id="header">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo" aria-label="LuxeNest Home">
-        <div class="logo-monogram">LN</div>
+        <img src="images/logo.jpg" alt="LuxeNest Interior Designing Logo" class="site-logo-img">
         <div>
           <span class="logo-text">LuxeNest</span>
-          <span class="logo-tagline">Haute Interiors & Architecture</span>
+          <span class="logo-tagline">Interior Designing • Spaces that feel like home</span>
         </div>
       </a>
 
@@ -46,6 +46,13 @@
 
     <!-- Mobile Drawer Navigation -->
     <div class="mobile-nav-drawer" id="mobileDrawer">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--border-subtle);">
+        <img src="images/logo.jpg" alt="LuxeNest Logo" style="width: 46px; height: 46px; border-radius: 4px; border: 1.5px solid var(--accent-gold); object-fit: cover;">
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-main); line-height: 1.1;">LuxeNest</div>
+          <div style="font-size: 0.62rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.15em; margin-top: 3px;">Spaces that feel like home</div>
+        </div>
+      </div>
       <a href="#styles" class="nav-link drawer-link">Design Styles</a>
       <a href="#case-study" class="nav-link drawer-link">Jaipur Case Study</a>
       <a href="#estimator" class="nav-link drawer-link">Cost Estimator</a>
@@ -733,7 +740,10 @@
   <div class="modal-backdrop" id="consultationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-dialog">
       <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
-      <span class="section-label">Reserve Your Session</span>
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+        <img src="images/logo.jpg" alt="LuxeNest Logo" style="width: 44px; height: 44px; border-radius: 4px; border: 1px solid var(--accent-gold); object-fit: cover;">
+        <span class="section-label" style="margin-bottom: 0;">Reserve Your Session</span>
+      </div>
       <h3 id="modalTitle" style="font-size: 1.6rem; margin-bottom: 8px;">Book a Private Design Consultation</h3>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">
         Meet our principal architect online or at our ateliers in Jaipur, Mumbai, Delhi, or Bengaluru.
@@ -819,15 +829,11 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#hero" class="brand-logo" style="margin-bottom: 12px; display: inline-flex;">
-            <div class="logo-monogram">LN</div>
-            <div>
-              <span class="logo-text" style="color: #FFFFFF;">LuxeNest</span>
-              <span class="logo-tagline" style="color: var(--accent-gold-light);">Haute Interiors</span>
-            </div>
+          <a href="#hero" class="footer-logo-card" aria-label="LuxeNest Home">
+            <img src="images/logo.jpg" alt="LuxeNest Interior Designing" class="footer-logo-img">
           </a>
           <p>
-            An award-winning interior architecture brand bridging the soul of royal Indian craftsmanship with contemporary global luxury.
+            An award-winning interior architecture brand bridging the soul of royal Indian craftsmanship with contemporary global luxury. Spaces that feel like home.
           </p>
           <div class="footer-studios">
             <span>📍 <strong>Jaipur:</strong> C-Scheme, Sardar Patel Marg</span>
