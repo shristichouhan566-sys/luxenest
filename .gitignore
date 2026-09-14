@@ -1,0 +1,5 @@
+.agent/
+.agents/
+server.ps1
+Open-Website.bat
+deploy-to-github.bat
