@@ -63,6 +63,18 @@
       window.LuxeNestApp.updateNavBadges();
       window.LuxeNestApp.showToast(`✨ Added "${product.name}" to your shopping bag`);
 
+      // Meta Pixel Event Tracking
+      if (typeof fbq === 'function') {
+        fbq('track', 'AddToCart', {
+          content_name: product.name,
+          content_category: product.category,
+          content_ids: [product.id],
+          content_type: 'product',
+          value: product.price * qty,
+          currency: 'INR'
+        });
+      }
+
       // Trigger re-render if on cart page
       if (document.getElementById('cartPageContainer')) {
         renderCartPage();
@@ -147,6 +159,17 @@
         writeStorage(WISHLIST_KEY, wishlist);
         window.LuxeNestApp.updateNavBadges();
         window.LuxeNestApp.showToast(`❤️ Saved "${product.name}" to your wishlist`);
+
+        // Meta Pixel Event Tracking
+        if (typeof fbq === 'function') {
+          fbq('track', 'AddToWishlist', {
+            content_name: product.name,
+            content_category: product.category,
+            content_ids: [product.id],
+            value: product.price,
+            currency: 'INR'
+          });
+        }
       }
 
       // Re-render if on wishlist page
@@ -1382,6 +1405,16 @@
           const orderId = 'LN-' + Math.floor(100000 + Math.random() * 900000);
           checkoutModal.classList.remove('open');
           document.body.style.overflow = '';
+          // Meta Pixel Event Tracking
+          if (typeof fbq === 'function') {
+            fbq('track', 'Purchase', {
+              value: grandTotal,
+              currency: 'INR',
+              content_name: 'Luxury Interior Order',
+              order_id: orderId
+            });
+          }
+
           window.LuxeNestCart.clear();
 
           // Show order confirmed modal
@@ -1572,6 +1605,10 @@
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      // Meta Pixel Event Tracking
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact');
+      }
       form.reset();
       window.LuxeNestApp.showToast('🎉 Thank you! Your inquiry has been sent. Our team will contact you within 4 business hours.');
     });
@@ -1604,6 +1641,14 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const refId = 'LN-CONS-' + Math.floor(10000 + Math.random() * 90000);
+
+      // Meta Pixel Event Tracking
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', {
+          content_name: 'Consultation Reservation',
+          currency: 'INR'
+        });
+      }
 
       if (modal && modalRef) {
         modalRef.textContent = refId;
